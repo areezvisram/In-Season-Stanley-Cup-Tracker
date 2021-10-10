@@ -45,7 +45,7 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-const IntroductionButton = ({ text, onClick }) => {
+const IntroductionButton = ({ text }) => {
     const classes = useStyles();          
     return (
         <Button variant="contained" className={classes.button}>{text}</Button>

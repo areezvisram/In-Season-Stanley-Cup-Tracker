@@ -5,9 +5,15 @@ const useStyles = makeStyles((theme) => ({
     button: {
         marginTop: theme.spacing(5),
         marginLeft: theme.spacing(30),
-        marginBottom: theme.spacing(5),
+         marginBottom: theme.spacing(5),      
         backgroundColor: theme.palette.primary.light,
         fontSize: theme.spacing(4),
+        [theme.breakpoints.up('1580')]: {
+            marginLeft: theme.spacing(45),
+        },
+        [theme.breakpoints.between('1169', '1579')]: {
+            marginLeft: theme.spacing(30),
+        },
         [theme.breakpoints.between('1050', '1170')]: {
             marginLeft: theme.spacing(25),
         },

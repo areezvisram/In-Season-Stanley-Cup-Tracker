@@ -14,8 +14,7 @@ const JoinLeagueBaseContainer = () => {
     const [userId, setUserId] = useState(null);
     const [documentId, setDocumentId] = useState(null);
 
-    useEffect(() => {
-      console.log("how many times is this rendering?");
+    useEffect(() => {      
       firebase.auth().onAuthStateChanged(user => {
         if (user) {                       
           setUserId(user.uid);          
@@ -28,16 +27,13 @@ const JoinLeagueBaseContainer = () => {
       })
     }, []);
 
-    
-
     if(!isLoading) {
-      getUserTeam(userId).then((res) => { setUserPick(res[0], setDocumentId(res[1]))});      
+      getUserTeam(userId).then((res) => { setUserPick(res[0], setDocumentId(res[1]))});
     }
-    
     
     return (
         <ThemeProvider theme={theme}>
-            <Box display='flex' flexDirection='column' height='300vh'>
+            <Box display='flex' flexDirection='column'>
                 {isLoading ? <Loading /> : 
                 <Box>
                     <Header />                    
