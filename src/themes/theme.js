@@ -3,7 +3,7 @@ import { createTheme, responsiveFontSizes } from '@material-ui/core';
 let theme = createTheme({
     palette: {
         background: {
-            default: '#F3F4FA',
+            default: '#000000',
         },
         primary: {
             light: '#FFFFFF',

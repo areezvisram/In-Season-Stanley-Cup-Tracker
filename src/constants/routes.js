@@ -1,8 +1,8 @@
 const tabInfo = [
     {
-        label: 'CREATE LEAGUE',
+        label: 'JOIN LEAGUE',
         value: 0,
-        route: '/create-league',
+        route: '/join-league',
     },
     {
         label: 'VIEW LEAGUES',
@@ -13,11 +13,6 @@ const tabInfo = [
         label: 'SEE HISTORY',
         value: 2,
         route: '/see-history',
-    },
-    {
-        label: 'LOGIN',
-        value: 3,
-        route: '/login',
     },
 ];
 

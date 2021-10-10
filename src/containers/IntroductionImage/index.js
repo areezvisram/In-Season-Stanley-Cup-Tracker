@@ -28,7 +28,7 @@ const useStyles = makeStyles((theme) => ({
     }
 }));
 
-const IntroductionImage = () => {
+const IntroductionImage = () => {    
     const classes = useStyles();
     return (
         <Box className={classes.box}>

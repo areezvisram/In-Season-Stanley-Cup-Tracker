@@ -1,14 +1,18 @@
 import React from 'react';
-import { Route, Switch } from 'react-router-dom';
+import { Route, Switch, BrowserRouter } from 'react-router-dom';
+import BaseContainer from '../../containers/BaseContainer';
+import JoinLeaguePage from '../../pages/JoinLeaguePage';
+
 const MainRouter = () => {
     return (
-        <Switch>
-            <Route path="/about" />
-            <Route path="/experience" />
-            <Route path="/projects" />
-            <Route path="/contact" />
-            <Route path="/resume" />
-        </Switch>
+        <BrowserRouter>
+            <Switch>            
+                <Route exact path='/' component={BaseContainer} />
+                <Route path="/join-league" component={JoinLeaguePage}/>
+                <Route path="/view-history" />
+                <Route path="/learn-more" />        
+            </Switch>
+        </BrowserRouter>
     )
 };
 

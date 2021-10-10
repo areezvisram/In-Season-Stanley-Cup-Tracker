@@ -10,7 +10,7 @@ const useStyles = makeStyles((theme) => ({
         "&:hover": {
             transform: 'scale(1.2)'
         }, 
-        padding: theme.spacing(4),
+        padding: theme.spacing(3),
     },
     smallTab: {
         color: theme.palette.primary.dark,        
@@ -28,7 +28,7 @@ const useStyles = makeStyles((theme) => ({
 const TabItem = ({ label, route, component }) => {    
     const classes = useStyles();    
     const theme = useTheme();    
-    const isSmallDisplay = useMediaQuery(theme.breakpoints.between('xs', '1070'));
+    const isSmallDisplay = useMediaQuery(theme.breakpoints.between('xs', '1070'));    
     return (          
         <Tab key={label} label={label} className={isSmallDisplay ? classes.smallTab : classes.tab} component={component} to={route}/>        
     )

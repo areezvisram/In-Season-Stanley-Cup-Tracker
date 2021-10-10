@@ -1,11 +1,10 @@
 import React from 'react';
-import BaseContainer from './containers/BaseContainer';
+import MainRouter from './routing/MainRouter';
 
-const App = () => {
+function App() {
   return (
-    <BaseContainer/>
+    <MainRouter />
   )
-
 }
 
 export default App;
