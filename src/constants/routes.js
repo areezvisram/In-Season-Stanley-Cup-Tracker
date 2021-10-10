@@ -15,9 +15,9 @@ const tabInfo = [
         route: '/learn-more',
     },
     {
-        label: 'FEEDBACK',
+        label: 'COMING SOON',
         value: 3,
-        route: '/feedback',
+        route: '/coming-soon',
     },
 ];
 

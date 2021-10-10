@@ -4,6 +4,7 @@ import BaseContainer from '../../containers/BaseContainer';
 import JoinLeaguePage from '../../pages/JoinLeaguePage';
 import UpdateChampionPage from '../../pages/UpdateChampionPage';
 import SeeHistoryPage from '../../pages/SeeHistoryPage';
+import LearnMorePage from '../../pages/LearnMorePage';
 
 const MainRouter = () => {
     return (
@@ -12,8 +13,8 @@ const MainRouter = () => {
                 <Route exact path='/' component={BaseContainer} />
                 <Route path="/view-pick" component={JoinLeaguePage}/>
                 <Route path="/see-history" component={SeeHistoryPage}/>
-                <Route path="/learn-more" />
-                <Route path="/feedback"/> 
+                <Route path="/learn-more" component={LearnMorePage}/>
+                <Route path="/coming-soon"/> 
                 <Route path="/update-champion" component={UpdateChampionPage}/>    
             </Switch>
         </BrowserRouter>
