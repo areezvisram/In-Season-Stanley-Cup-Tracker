@@ -1,5 +1,6 @@
 import { Typography, makeStyles, Grid, Box } from "@material-ui/core";
-import React from "react";
+import React, { useEffect} from "react";
+import { enableBodyScroll } from "body-scroll-lock";
 
 const useStyles = makeStyles((theme) => ({
     typography: {
@@ -17,6 +18,9 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const LearnMore = () => {
+    useEffect(() => {
+        enableBodyScroll(document);
+    })   
     const classes = useStyles();
     return (
         <Box>                         
