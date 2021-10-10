@@ -12,7 +12,7 @@ const useStyles = makeStyles((theme) => ({
         fontWeight: 'bold',
         fontSize: theme.spacing(6.5),
         marginLeft: theme.spacing(-18),
-        marginTop: theme.spacing(3),
+        marginTop: theme.spacing(-15),
         [theme.breakpoints.up('1545')]: {
             marginLeft: theme.spacing(-5),
             fontSize: theme.spacing(7),
@@ -21,14 +21,25 @@ const useStyles = makeStyles((theme) => ({
             marginLeft: theme.spacing(-5),
             fontSize: theme.spacing(5),
         },
-        [theme.breakpoints.between('1155', '1433')]: {
-            marginLeft: theme.spacing(-5),
-            fontSize: theme.spacing(5),
-        },
-        [theme.breakpoints.between('5', '1154')]: {
+        [theme.breakpoints.between('965', '1155')]: {
             marginLeft: theme.spacing(-10),
             fontSize: theme.spacing(5),
-            marginTop: theme.spacing(25)
+            marginTop: theme.spacing(-10)
+        },
+        [theme.breakpoints.between('870', '964')]: {
+            marginLeft: theme.spacing(-10),
+            fontSize: theme.spacing(5),
+            marginTop: theme.spacing(-8)
+        },
+        [theme.breakpoints.between('710', '869')]: {
+            marginLeft: theme.spacing(-10),
+            fontSize: theme.spacing(5),
+            marginTop: theme.spacing(-6)
+        },
+        [theme.breakpoints.between('5', '709')]: {
+            marginLeft: theme.spacing(-10),
+            fontSize: theme.spacing(5),
+            marginTop: theme.spacing(-3)
         },
     },
     current: {
@@ -97,7 +108,7 @@ const useStyles = makeStyles((theme) => ({
         fontWeight: 'bold',
         fontSize: theme.spacing(8),
         marginLeft: theme.spacing(15),
-        marginTop: theme.spacing(0),
+        marginTop: theme.spacing(-10),
 
         [theme.breakpoints.between('1400', '1800')]: {
             marginLeft: theme.spacing(0),

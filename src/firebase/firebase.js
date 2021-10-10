@@ -31,6 +31,18 @@ const updateChampion = async (newChampion, documentId) => {
   await db.collection('current_champion').doc(documentId).update({ NHLId: newChampion })
 }
 
+const addToHistory = async (awayTeamId, homeTeamId, awayTeamScore, homeTeamScore, championId, gameDate) => {
+  await db.collection('history').add({
+    awayTeamId,
+    awayTeamScore,
+    championId,
+    gameDate,
+    homeTeamId,
+    homeTeamScore,
+    index: Math.floor(Math.random() * 100000)
+  })
+}
+
 const getCurrentChampion = async () => {
   const res = await db.collection('current_champion').get();
   return res.docs[0]._delegate._document.data.value.mapValue.fields.NHLId.integerValue;
@@ -39,6 +51,11 @@ const getCurrentChampion = async () => {
 const getCurrentChampionNHLId = async () => {
   const res = await db.collection('current_champion').get();
   return res.docs[0]._delegate._document.data.value.mapValue.fields.NHLId.integerValue;
+}
+
+const getHistory = async () => {
+  const res = await db.collection('history').orderBy("gameDate").get();  
+  return res.docs.reverse();
 }
 
 const signInWithGoogle = async () => {
@@ -77,5 +94,7 @@ export {
   updateUserTeam,
   getCurrentChampion,
   getCurrentChampionNHLId,
-  updateChampion
+  updateChampion,
+  getHistory,
+  addToHistory
 };

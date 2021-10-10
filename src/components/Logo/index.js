@@ -1,24 +1,28 @@
 import React from 'react';
 import logo from './logo.png';
-import { makeStyles, Typography } from '@material-ui/core';
+import { Box, Grid, makeStyles, Typography } from '@material-ui/core';
+import { Link } from 'react-router-dom';
 
 const useStyles = makeStyles((theme) => ({
     logo: {
         height: theme.spacing(20),
         width: theme.spacing(20),
-        marginTop: theme.spacing(8)
+        marginTop: theme.spacing(8),
+        zIndex: 10
     },
     container: {
-        flexGrow: 1
+        // flexGrow: 1,
+        flex: 1,
+        width: 'max-content'
     }
 }));
 
 const Logo = () => {
     const classes = useStyles();
-    return (
-        <Typography className={classes.container}>            
-                <img src={logo} alt="" className={classes.logo}></img>            
-        </Typography>
+    return (       
+        <Link to='/'>
+            <img src={logo} alt="" className={classes.logo}></img>            
+        </Link>
     )
 }
 

@@ -18,9 +18,9 @@ const IntroductionButtons = () => {
     const classes = useStyles();
     return (
         <Box className={classes.box}>
-            <IntroductionButton text={'Create League'}/>
-            <IntroductionButton text={'View History'}/>
-            <IntroductionButton text={'Learn More'}/>
+            <IntroductionButton text={'MAKE PICK'} route="/view-pick"/>
+            <IntroductionButton text={'See History'} route="/see-history"/>
+            <IntroductionButton text={'Learn More'} route="/learn-more"/>
         </Box>
     )
 }

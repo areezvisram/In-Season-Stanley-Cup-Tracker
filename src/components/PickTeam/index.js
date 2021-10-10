@@ -53,7 +53,9 @@ const PickTeam = ({ documentId }) => {
     };
 
     const confirmOnClick = () => {
-        updateUserTeam(selectedTeam, documentId);
+        updateUserTeam(selectedTeam, documentId).then(() => {
+            window.location.reload(false);
+        });
     }
     
     const items = teams.map((item) => {

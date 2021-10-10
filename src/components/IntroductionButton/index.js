@@ -1,5 +1,6 @@
 import React from "react";
 import { Button, makeStyles } from "@material-ui/core";
+import { Link } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
     button: {
@@ -43,12 +44,18 @@ const useStyles = makeStyles((theme) => ({
         },   
         borderRadius: '15px'
     },
+
+    link: {
+        textDecoration: 'none'
+    }
 }));
 
-const IntroductionButton = ({ text }) => {
+const IntroductionButton = ({ text, route }) => {
     const classes = useStyles();          
     return (
-        <Button variant="contained" className={classes.button}>{text}</Button>
+        <Link to={route} className={classes.link} >
+            <Button variant="contained" className={classes.button}>{text}</Button>
+        </Link>
     )
 }
 

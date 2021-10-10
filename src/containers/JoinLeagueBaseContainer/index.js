@@ -36,7 +36,7 @@ const JoinLeagueBaseContainer = () => {
             <Box display='flex' flexDirection='column'>
                 {isLoading ? <Loading /> : 
                 <Box>
-                    <Header />                    
+                    <Header position="static" />                    
                     <ShowTeam team={userPick} uid={userId} documentId={documentId}/>                  
                 </Box>
                 }    

@@ -3,15 +3,13 @@ import { CssBaseline, Box } from "@material-ui/core";
 import { ThemeProvider } from "@material-ui/styles";
 import { theme } from "../../themes/theme";
 import IntroductionImage from "../IntroductionImage";
-import { logout } from "../../firebase/firebase";
 import { disableBodyScroll } from "body-scroll-lock";
 
-const BaseContainer = () => { 
-    logout();   
+const BaseContainer = () => {     
     disableBodyScroll(document);
     return (
         <ThemeProvider theme={theme}>
-            <Box display='flex' flexDirection='column' height='300vh'>                
+            <Box display='flex' flexDirection='column' height='300vh'>                          
                 <IntroductionImage />
                 <CssBaseline />
             </Box>

@@ -1,5 +1,5 @@
 import React from "react";
-import { AppBar, Toolbar, makeStyles, Box } from "@material-ui/core";
+import { AppBar, Toolbar, makeStyles, Box, Grid } from "@material-ui/core";
 import NavigationItem from '../../components/NavigationItem';
 import { tabInfo } from '../../constants/routes';
 import Logo from "../../components/Logo";
@@ -8,21 +8,27 @@ const useStyles = makeStyles((theme) => ({
     appBar: {
         background: 'transparent',
         boxShadow: 'none',
-        height: theme.spacing(15),
+        height: theme.spacing(15),               
     },
 }));
 
-const Header = () => {
+const Header = ({ position }) => {
     const classes = useStyles();
     return (
-        <Box>
-            <AppBar className={classes.appBar}>
+        <Grid container>
+            <AppBar className={classes.appBar} position={position}>
                 <Toolbar>
-                    <Logo />
-                    <NavigationItem tabInfo={tabInfo} />
+                    <Grid container item xs={4} justifyContent="flex-start">
+                        <Logo />
+                    </Grid>
+                    <Grid item xs={4}>                        
+                    </Grid>
+                    <Grid container item xs={4} justifyContent="flex-end">
+                        <NavigationItem tabInfo={tabInfo} />
+                    </Grid>
                 </Toolbar>
             </AppBar>
-        </Box>
+        </Grid>
     );
 };
 

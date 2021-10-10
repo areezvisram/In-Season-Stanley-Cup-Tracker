@@ -32,7 +32,7 @@ const IntroductionImage = () => {
     const classes = useStyles();
     return (
         <Box className={classes.box}>
-            <Header />            
+            <Header position="relative" />       
             <div style= {{ height: '35%' }}>
                 <img src={background} alt="" className={classes.image}></img>
                 <IntroductionText />

@@ -5,7 +5,8 @@ import DrawerMenu from '../DrawerMenu';
 
 const useStyles = makeStyles((theme) => ({
     iconButton: {
-        color: theme.palette.primary.contrastText,        
+        color: theme.palette.primary.contrastText,  
+        zIndex: 10000      
     },
     menuIcon: {
         fontSize: theme.spacing(5)
@@ -22,7 +23,9 @@ const HamburgerMenu = ({ tabInfo, tabComponent }) => {
     return (
         <Box>
             <IconButton className={classes.iconButton} size={'small'} onClick={handleDrawerOpen}>
-                <MenuIcon className={classes.menuIcon} />
+                {
+                    !isDrawerOpen ? <MenuIcon className={classes.menuIcon} /> : null
+                }                
             </IconButton>
                         
            <DrawerMenu isDrawerOpen={isDrawerOpen} handleDrawerOpen={handleDrawerOpen} tabInfo={tabInfo} tabComponent={tabComponent} />
