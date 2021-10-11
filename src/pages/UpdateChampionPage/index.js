@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { updateCurrentChampion } from "../../firebase/nhl";
 
-const UpdateChampionPage = () => {
+const UpdateChampionPage = () => {    
     useEffect(() => {
         updateCurrentChampion();
     }, [])

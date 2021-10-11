@@ -3,16 +3,21 @@ import 'firebase/compat/firestore';
 import 'firebase/compat/auth';
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBH0ws-WyC4saSPkP8VQefkuzJ2LeAvPHc",
-  authDomain: "in-season-stanley-cup-tracker.firebaseapp.com",
-  projectId: "in-season-stanley-cup-tracker",
-  storageBucket: "in-season-stanley-cup-tracker.appspot.com",
-  messagingSenderId: "161960590444",
-  appId: "1:161960590444:web:5696919b41049a8668ec49",
-  measurementId: "G-B875G21406"
+    apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
+    authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
+    projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
+    storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
+    messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
+    appId: process.env.REACT_APP_FIREBASE_APP_ID,
+    measurementId: process.env.REACT_APP_FIREBASE_MEASUREMENT_ID
 };
 
-const app = firebase.initializeApp(firebaseConfig);
+let app;
+if(!firebase.apps.length) {
+  app = firebase.initializeApp(firebaseConfig);
+} else {
+  app = firebase.app();
+}
 const auth = app.auth();
 const db = app.firestore();
 
