@@ -1,6 +1,6 @@
 import React from 'react';
 import logo from './logo.png';
-import { Box, Grid, makeStyles, Typography } from '@material-ui/core';
+import { makeStyles } from '@material-ui/core';
 import { Link } from 'react-router-dom';
 
 const useStyles = makeStyles((theme) => ({

@@ -29,21 +29,15 @@ const useStyles = makeStyles((theme) => ({
 }));
 const ContactForm =() => {
     const classes = useStyles();
-  const [value, setValue] = React.useState('');
-
-  const handleChange = e => {
-    setValue(e.target.value);
-  };
 
   return (
       <Grid container justifyContent="center">
         <form action="https://getform.io/f/caf0aaaa-c254-4f63-af28-c55a09a4f545" method="POST">
             <TextField
-                name="body"
+                name="Message"
                 label="Leave your feedback here"
                 multiline
-                rows={8}
-                onChange={handleChange}                        
+                rows={8}                      
                 className={classes.textField}
                 InputProps={{ classes: { input: classes.font }}}
             />

@@ -1,5 +1,5 @@
 import React from "react";
-import { AppBar, Toolbar, makeStyles, Box, Grid } from "@material-ui/core";
+import { AppBar, Toolbar, makeStyles, Grid } from "@material-ui/core";
 import NavigationItem from '../../components/NavigationItem';
 import { tabInfo } from '../../constants/routes';
 import Logo from "../../components/Logo";

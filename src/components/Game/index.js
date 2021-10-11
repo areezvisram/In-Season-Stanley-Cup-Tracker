@@ -36,13 +36,13 @@ const Game = ({ homeId, awayId, homeScore, awayScore, date, currentChampion }) =
                 <Box>
                     <Grid container justifyContent="center">
                         <Typography className={classes.date}>{date}</Typography>
-                        <img src={teams.find(x => x.id == homeId).src}></img>
+                        <img src={teams.find(x => x.id == homeId).src} alt=""></img>
                         <Typography className={classes.typography}>{homeScore} - {awayScore}</Typography>
-                        <img src={teams.find(x => x.id == awayId).src}></img>
+                        <img src={teams.find(x => x.id == awayId).src} alt=""></img>
                     </Grid>        
                     <Grid container justifyContent="center" direction="row">
                         <Typography className={classes.champion}>Champion: </Typography>
-                        <img src={teams.find(x => x.id == currentChampion).src}></img>
+                        <img src={teams.find(x => x.id == currentChampion).src} alt=""></img>
                     </Grid>              
                 </Box>            
             : 

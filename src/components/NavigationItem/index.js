@@ -1,5 +1,5 @@
 import React from "react";
-import { Tabs, makeStyles, useTheme, useMediaQuery, Box, Grid } from "@material-ui/core";
+import { Tabs, makeStyles, useTheme, useMediaQuery, Grid } from "@material-ui/core";
 import TabItem from './TabItem';
 import { Link } from "react-router-dom";
 import HamburgerMenu from '../HamburgerMenu';

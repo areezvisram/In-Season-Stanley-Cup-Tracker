@@ -12,7 +12,7 @@ const useStyles = makeStyles((theme) => ({
         fontWeight: "bold",        
     },
 }));
-
+// Lemon
 const DisplayHistory = () => {
     const classes = useStyles();
     const [gameHistory, setGameHistory] = useState([]);
@@ -25,7 +25,8 @@ const DisplayHistory = () => {
             <Grid container justifyContent="center">
                 <Typography className={classes.typography}>Season History</Typography>      
             </Grid>        
-        {                   
+        {                 
+              
             gameHistory.length != 0 ? (
                 gameHistory.map(game => 
                 <Game 
