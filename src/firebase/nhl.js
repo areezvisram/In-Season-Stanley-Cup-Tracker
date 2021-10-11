@@ -9,8 +9,7 @@ const updateCurrentChampion = async () => {
         const isChampionHome = data.teams[0].previousGameSchedule.dates[0].games[0].teams.home.team.id == currentChampion;
     
         const homeTeamScore = data.teams[0].previousGameSchedule.dates[0].games[0].teams.home.score;
-        //const awayTeamScore = data.teams[0].previousGameSchedule.dates[0].games[0].teams.away.score;        
-        const awayTeamScore = 4;
+        const awayTeamScore = data.teams[0].previousGameSchedule.dates[0].games[0].teams.away.score;                
 
         if(isChampionHome) {
             if(awayTeamScore > homeTeamScore) {
@@ -19,8 +18,7 @@ const updateCurrentChampion = async () => {
                 addToHistory(
                     data.teams[0].previousGameSchedule.dates[0].games[0].teams.away.team.id, 
                     data.teams[0].previousGameSchedule.dates[0].games[0].teams.home.team.id, 
-                    //data.teams[0].previousGameSchedule.dates[0].games[0].teams.away.score,                                        
-                    4,
+                    data.teams[0].previousGameSchedule.dates[0].games[0].teams.away.score,
                     data.teams[0].previousGameSchedule.dates[0].games[0].teams.home.score,
                     newChampionId,
                     data.teams[0].previousGameSchedule.dates[0].date
