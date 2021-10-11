@@ -12,7 +12,7 @@ const useStyles = makeStyles((theme) => ({
         fontWeight: "bold",        
     },
 }));
-// Lemon
+
 const DisplayHistory = () => {
     const classes = useStyles();
     const [gameHistory, setGameHistory] = useState([]);
