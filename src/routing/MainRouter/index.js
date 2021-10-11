@@ -6,14 +6,14 @@ import UpdateChampionPage from '../../pages/UpdateChampionPage';
 import SeeHistoryPage from '../../pages/SeeHistoryPage';
 import LearnMorePage from '../../pages/LearnMorePage';
 import ComingSoonPage from '../../pages/ComingSoonPage';
-import Login from '../../containers/LoginContainer';
+import LoginPage from '../../pages/LoginPage';
 
 const MainRouter = () => {
     return (
         <BrowserRouter>
             <Switch>            
                 <Route exact path='/' component={BaseContainer} />
-                <Route path="/login" component={Login}/>
+                <Route path="/login" component={LoginPage}/>
                 <Route path="/see-history" component={SeeHistoryPage}/>
                 <Route path="/learn-more" component={LearnMorePage}/>
                 <Route path="/coming-soon" component={ComingSoonPage}/> 

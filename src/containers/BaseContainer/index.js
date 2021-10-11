@@ -5,7 +5,7 @@ import { theme } from "../../themes/theme";
 import IntroductionImage from "../IntroductionImage";
 import { disableBodyScroll } from "body-scroll-lock";
 
-const BaseContainer = () => {            
+const BaseContainer = () => {                
     disableBodyScroll(document);    
     return (
         <ThemeProvider theme={theme}>

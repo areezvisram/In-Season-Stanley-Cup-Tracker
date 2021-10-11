@@ -1,33 +1,21 @@
-import { useState, useEffect } from "react";
-import { useHistory } from "react-router-dom";
-import { signInWithGoogle, auth } from "../../firebase/firebase";
-import { useAuthState } from "react-firebase-hooks/auth";
-import Loading from "../../components/Loading";
-import { Grid } from "@material-ui/core";
-import SignInButton from "../../components/SignInButton";
+import React from "react";
+import { CssBaseline, Box } from "@material-ui/core";
+import { ThemeProvider } from "@material-ui/styles";
+import { theme } from "../../themes/theme";
+import Header from "../../containers/HeaderNotSignedIn";
+import Login from "../../components/Login";
 
-const Login = () => {
-    const [isLoading, setLoading] = useState(false);
-    const [user, loading, error] = useAuthState(auth);
-    const history = useHistory();
-    useEffect(() => {
-    if (loading) {
-        setLoading(true);
-    }
-    if (user) {          
-        setTimeout(() => {            
-            history.replace("/view-pick")
-            }, 500); 
-    } 
-    }, [user, loading]);
-
-    if(isLoading) {
-        <Loading />
-    }
+const LoginContainer = () => {   
     return (
-        <Grid container justifyContent="center" spacing={0} alignItems="center" style={{ height: "100vh", backgroundColor: 'black'}}>
-            <SignInButton text="Login With Google" onClick={signInWithGoogle} />
-        </Grid>    
-    );
+        <ThemeProvider theme={theme}>
+            <Box display='flex' flexDirection='column'> 
+                <Header position="static" />                   
+                <Login />
+                <CssBaseline />
+            </Box>
+        </ThemeProvider>        
+    )
+
 }
-export default Login;
+
+export default LoginContainer;
