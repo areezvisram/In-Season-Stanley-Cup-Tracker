@@ -4,7 +4,7 @@ import { Button, makeStyles } from "@material-ui/core";
 const useStyles = makeStyles((theme) => ({
     button: {
         marginRight: theme.spacing(5),
-        color: theme.palette.primary.light,
+        backgroundColor: theme.palette.primary.light,
         fontSize: theme.spacing(3),
         marginBottom: theme.spacing(2),
         fontWeight: 'bold',
@@ -17,11 +17,11 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-const SubmitButton = ({ text }) => {
+const SignInButton = ({ text, onClick }) => {
     const classes = useStyles();          
     return (
-        <Button variant="contained" className={classes.button} type="submit">{text}</Button>
+        <Button variant="contained" className={classes.button} onClick={onClick}>{text}</Button>
     )
 }
 
-export default SubmitButton;
+export default SignInButton;

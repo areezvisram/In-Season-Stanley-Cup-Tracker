@@ -19,7 +19,8 @@ const db = app.firestore();
 const googleProvider = new firebase.auth.GoogleAuthProvider();
 
 const getUserTeam = async (uid) => {
-  const res = await db.collection('users').where('uid', '==', uid).get();  
+  setTimeout(5000);
+  const res = await db.collection('users').where('uid', '==', uid).get();
   return [res.docs[0]._delegate._document.data.value.mapValue.fields.team.integerValue, res.docs[0].id];  
 };
 
@@ -60,7 +61,7 @@ const getHistory = async () => {
 
 const signInWithGoogle = async () => {
   try {
-    const res = await auth.signInWithRedirect(googleProvider);
+    const res = await auth.signInWithPopup(googleProvider);
     const user = res.user;
     const query = await db
       .collection("users")
@@ -87,9 +88,9 @@ const logout = () => {
 
 export {
   auth,
-  db,
-  signInWithGoogle,
+  db,  
   logout,
+  signInWithGoogle,
   getUserTeam,
   updateUserTeam,
   getCurrentChampion,

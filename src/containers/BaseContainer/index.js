@@ -5,8 +5,8 @@ import { theme } from "../../themes/theme";
 import IntroductionImage from "../IntroductionImage";
 import { disableBodyScroll } from "body-scroll-lock";
 
-const BaseContainer = () => {     
-    disableBodyScroll(document);
+const BaseContainer = () => {            
+    disableBodyScroll(document);    
     return (
         <ThemeProvider theme={theme}>
             <Box display='flex' flexDirection='column' height='300vh'>                          

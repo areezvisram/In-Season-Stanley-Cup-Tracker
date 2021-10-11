@@ -2,7 +2,7 @@ const tabInfo = [
     {
         label: 'VIEW PICK',
         value: 0,
-        route: '/view-pick',
+        route: '/login',
     },
     {
         label: 'SEE HISTORY',

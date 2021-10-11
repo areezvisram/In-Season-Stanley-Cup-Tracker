@@ -16,13 +16,13 @@ const JoinLeagueBaseContainer = () => {
 
     useEffect(() => {      
       firebase.auth().onAuthStateChanged(user => {
-        if (user) {                       
+        if (user) { 
           setUserId(user.uid);          
           setLoading(false);
         }
-        else {
-          setLoading(false);
+        else { 
           signInWithGoogle();
+          setLoading(false);
         }
       })
     }, []);
