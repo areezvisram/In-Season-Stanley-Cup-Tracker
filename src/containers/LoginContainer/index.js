@@ -25,7 +25,7 @@ const Login = () => {
         <Loading />
     }
     return (
-        <Grid container justifyContent="center" spacing={0} alignItems="center" style={{ height: "100vh"}}>
+        <Grid container justifyContent="center" spacing={0} alignItems="center" style={{ height: "100vh", backgroundColor: 'black'}}>
             <SignInButton text="Login With Google" onClick={signInWithGoogle} />
         </Grid>    
     );
