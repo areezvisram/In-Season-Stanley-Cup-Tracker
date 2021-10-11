@@ -1,70 +1,25 @@
-# Getting Started with Create React App
+# In Season Stanley Cup Tracker
+### On the 32 Thoughts Podcast, they discussed an "In Season Stanley Cup" competition for the upcoming NHL Season. I was intrigued by the idea but realized there was no website made to track the winner. So I decided to make one myself.
+**Disclaimer**: All credit for the idea goes to the 32 Thoughts Podcast. This project does not claim to have conceived the idea, it was just made as a tool to track it.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Check it out: https://inseasonstanleycup.netlify.app/
+### Created by: Areez Visram
 
-## Available Scripts
+## **Competition Overview**
+How does the competition work?
+- To start the season, the current champion is the Tampa Bay Lightning
+- Whichever team beats them first become the current champion
+- The next team to beat that team become the current champion, and so on, until the end of the season where the current champion is crowned the In Season Stanley Cup winner
 
-In the project directory, you can run:
+## **Features**
+- Make a selection for who you think will be the winner and come back at any time to view your pick compared to the current champion at the time
+- View the history of the competition throughout the season to see how the current champion came to be
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## **Updates in Development**
+- Champion for number of days tracker. Another element to the competition where the team who is champion for the most amount of days throughout the season is the winner
+- Live draft with friends. Create leagues with friends and live draft which teams you think will win, and keep a score throughout the season to see who wins
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Creation
+- Frontend created with ReactJS, CSS, hosted on Netlify
+- Firebase database
