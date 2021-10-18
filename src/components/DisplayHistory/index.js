@@ -8,8 +8,11 @@ const useStyles = makeStyles((theme) => ({
     typography: {
         fontSize: theme.spacing(8),
         color: theme.palette.primary.light,
-        marginTop: theme.spacing(20),
-        fontWeight: "bold",        
+        marginTop: theme.spacing(8),
+        fontWeight: "bold",   
+        [theme.breakpoints.down('475')]: {
+            fontSize: theme.spacing(5),
+        },     
     },
 }));
 

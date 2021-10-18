@@ -16,7 +16,19 @@ const useStyles = makeStyles((theme) => ({
     },
     logo: {
         marginLeft: theme.spacing(-5),
-    },    
+        [theme.breakpoints.down('460')]: {
+            width: '150px',
+            height: '112px',
+            marginTop: theme.spacing(2)
+        },
+    },   
+    awayLogo: {
+        [theme.breakpoints.down('460')]: {
+            width: '150px',
+            height: '112px',
+            marginTop: theme.spacing(2)
+        },
+    },
     champion: {
         fontSize: theme.spacing(6),
         color: theme.palette.primary.light,
@@ -28,7 +40,7 @@ const useStyles = makeStyles((theme) => ({
 const Game = ({ homeId, awayId, homeScore, awayScore, date, currentChampion }) => {
     const classes = useStyles();
     const theme = useTheme();
-    const isSmallDisplay = useMediaQuery(theme.breakpoints.between('500', '800'));    
+    const isSmallDisplay = useMediaQuery(theme.breakpoints.between('0', '800'));    
 
     return (
         <Box>
@@ -53,7 +65,7 @@ const Game = ({ homeId, awayId, homeScore, awayScore, date, currentChampion }) =
                 <Grid container justifyContent="center">
                     <img src={teams.find(x => x.id == homeId).src} className={classes.logo}></img>
                     <Typography className={classes.typography}>{homeScore} - {awayScore}</Typography>
-                    <img src={teams.find(x => x.id == awayId).src}></img>
+                    <img src={teams.find(x => x.id == awayId).src} className={classes.awayLogo}></img>
                     </Grid>
                 <Grid container justifyContent="center" direction="row">
                     <Typography className={classes.champion}>Champion: </Typography>

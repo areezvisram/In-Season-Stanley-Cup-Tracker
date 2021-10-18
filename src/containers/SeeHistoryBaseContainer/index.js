@@ -4,12 +4,14 @@ import { ThemeProvider } from "@material-ui/styles";
 import { theme } from "../../themes/theme";
 import Header from "../../containers/HeaderNotSignedIn";
 import DisplayHistory from "../../components/DisplayHistory";
+import { enableBodyScroll } from "body-scroll-lock";
 
 const SeeHistoryBaseContainer = () => {   
+    enableBodyScroll(document);
     return (
         <ThemeProvider theme={theme}>
             <Box display='flex' flexDirection='column'> 
-                <Header />                   
+                <Header position="relative"/>                   
                 <DisplayHistory />
                 <CssBaseline />
             </Box>
